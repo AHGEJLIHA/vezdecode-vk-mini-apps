@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*~~~~~~~~~~~CONTAINER~~~~~~~~~~*/
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/*~~~~~~~~~~~HEADER~~~~~~~~~~~~~*/
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #0a2830;
+}
+
+.header__logo {
+}
+
+.header__logo_img {
+    height: 30px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation__link {
+    font-family: 'PressStart', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.75;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 2px 0 #000,
+    0 3px 0 #000;
+
+    margin-left: 59px;
+
+    transition: opacity 0.2s;
+}
+
+.navigation__link:hover{
+    opacity: 1;
+}
+
+/*~~~~~~~~~~~~INTRO~~~~~~~~~~~~~*/
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 1000px;
+    background: #2a2d48 url("images/background.png") center;
+
+    text-align: center;
+    align-items: center;
+}
+
+.intro__inner {
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 30px;
+}
+
+.intro__title {
+    font-family: 'PressStart', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 1.09;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 7px 0 #904b6b,
+    0 10px 0 #904b6b;
+
+    text-align: center;
+}
+
+.intro__subtitle{
+    font-family: 'PressStart', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.5;
+    color: #fff;
+    text-shadow: 0 6px 0 #904b6b,
+    0 6px 0 #904b6b,
+    0 6px 0 #904b6b;
+
+    text-align: center;
+
+    margin-top: 41px;
+}
+
+.intro__button{
+    margin-top: 95px;
+    text-align: center;
+}
+
+.intro__text_button{
+    font-family: 'PressStart', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.62;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #a83b75;
+    transition: background-color 0.2s;
+
+    padding: 18px 46px 18px 54px;
+
+    border-radius: 3px;
+}
+
+.intro__text_button:hover{
+    background-color: red;
+}
+
+/*~~~~~~~~~~~OUR TEAM~~~~~~~~~~~*/
+.team{
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: left;
+
+    margin: 100px 0;
+}
+
+.team__item{
+    margin: 0 0 30px 30px;
+
+    width: 25%;
+    max-width: 250px;
+}
+
+.team__item_image{
+    margin-bottom: 31px;
+
+    display: block;
+    max-width: 100%;
+    height: 300px;
+}
+
+.team__item_name{
+    font-family: 'PressStart', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #2d3033;
+
+    margin-bottom: 16px;
+}
+
+.team__item_post{
+    font-family: 'PressStart', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #e84545;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+.team__item_description{
+    font-family: 'PressStart', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
+
+    margin-bottom: 31px;
+}
+
+.team__item_socialnet{
+    display: flex;
+}
+
+.team__item_socialnet_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #e8ecee;
+
+    margin-left: 4px;
+
+    transition: background 0.2s linear;
+}
+
+.team__item_socialnet_item:first-child{
+    margin-left: 0;
+}
+
+.team__item_socialnet_item:hover{
+    background-color: #e8ecee;
+}
+
+.team__item_socialnet_item:hover .team__item_socialnet_image{
+    fill: #e84545;
+}
+
+.team__item_socialnet_link{
+
+}
+
+.team__item_socialnet_image{
+    display: block;
+
+    fill: #c6cacc;
+
+    width: 18px;
+    height: 18px;
+}
+
+@font-face {
+font-family: "PressStart";
+src: url("fonts/pressstart.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* 1) Никита предложил убрать навигацию и сделать сбоку бургер
+2) Поиграться с анимацией, чтобы вниз листать и было динамическим все
+3) Нажимаешь на press start - начинается знакомство
+ */
